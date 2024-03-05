@@ -1,0 +1,121 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Fondo gris suave */
+    color: #333; /* Color de texto predeterminado */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #77cacb; /* Verde oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #000; /* Texto negro */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+    color: #333; /* Gris oscuro al pasar el ratón */
+}
+
+.user-info .small-image-container {
+    margin-left: 20px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info img {
+    max-width: 50px; /* Ajusta según el tamaño deseado */
+    border-radius: 50%; /* Bordes redondeados para la imagen */
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.recent-courses {
+    width: 40%; /* Ancho similar al de los otros cuadros */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para cada sección */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(17, 15, 15, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el contenido de cada sección */
+    transition: transform 0.3s ease;
+}
+
+.recent-courses:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+.recent-courses h2 {
+    color: #0e0588; /* Color de título gris oscuro */
+}
+
+.course {
+    border: none; /* Sin borde para cada curso individual */
+    padding: 0; /* Sin relleno para cada curso individual */
+    margin-bottom: 10px; /* Espaciado inferior entre cursos individuales */
+}
+
+.course h2 {
+    margin-top: 0;
+}
+
+.course p {
+    margin-bottom: 5px;
+}
+
+
+section {
+    width: 40%; /* Ajusta según el ancho deseado */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para cada sección */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(17, 15, 15, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el contenido de cada sección */
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+section h2 {
+    color: #0e0588; /* Color de título gris oscuro */
+}
+
+/* Estilos para FullCalendar */
+#calendar {
+    max-width: 800px;
+    margin: 10px auto;
+}
+

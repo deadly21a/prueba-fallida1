@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Estudiante</title>
+    <link rel="stylesheet" href="InicioEstudiante.css">
+    
+    <!-- Agrega las referencias a las bibliotecas de FullCalendar y jQuery aquí -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-JkaxCUV2cDYylW1Ao/Up7XFM1WTAtadDxDcg1OGr+Z8CqV4nfr3qYqrWeaRyDfAseBQyp4HxXCxDhvz2TIazWg==" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha512-Xr8stA9pXhqH6zyr0xV5tQ24sTDO+3vHxHigl2yHfT/ZssZ3Xr27VYFhV5VPU+jt7JWhb+5nhfT7PDgj86cXQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-RHvAu3gKpPeRrL6A+NzpT29S0Xnlm5fPZcU5F+LO3QwVR6Iv11A+In8P89PmkOfGLJ0sX7FqP3AE7tHVddiHig=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-Tug93aF08+9h9WpI23r+OokPhC5jpOQkLUK9O6JWws0q9Xn+xfLEJ3WjMF6UfQ4OXjrnrU5dlIm+hXUKclC/7Q==" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Agrega tu logo aquí -->
+            <img src="Logo-universidad-ecotec.png" alt="Logo" class="logo">
+        </div>
+        <div class="user-info">
+            <span>MARIA</span>
+            <br>
+            <span>Estudiante Grado</span>
+            <div class="small-image-container">
+                <img src="cerebro.png" alt="Imagen pequeña" class="small-image">
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li id="perfil">Mi perfil</li>
+            <li id="cursos">Cursos</li>
+            <li id="malla" class="interactive">Malla</li>
+            <li id="materias" class="interactive">Materias</li>
+            <li id="horarios">Horarios</li>
+            <li id="estadosCuenta">Estados de Cuenta</li>
+            <li id="solicitudes">Solicitudes</li>
+            <li id="certificados">Certificados</li>
+            <li id="eventos">Eventos</li>
+            <li id="proyectos">Proyectos</li>
+            <li id="noticias">Noticias</li>
+            <li id="ecobuses">Ecobuses</li>
+            <li id="biblioteca">Biblioteca</li>
+        </ul>
+    </div>
+    
+    <main>
+        <section class="user-details">
+            <h2>Información del Usuario</h2>
+            <p>VALAREZO ROMERO MARIA PAULINA</p>
+            <p>mariapvalarezo@est.ecotec.edu.ec</p>
+            <p>ESTUDIANTE DE GRADO</p>
+            <p>CÓDIGO DE ESTUDIANTE: 2022561500</p>
+            <p>FACULTAD DERECHO Y GOBERNABILIDAD</p>
+            <p>CIENCIAS PENALES Y CRIMINOLOGICAS - 2020</p>
+        </section>
+
+        <section class="progress-bar">
+            <h2>Mi Avance de la Carrera</h2>
+            <p>40%</p>
+            <progress value="40" max="100"></progress>
+        </section>
+
+        <div class="recent-courses">
+            <h2>Mis Materias Recientes</h2>
+            <div id="recentCoursesList"></div>
+        </div>
+        
+
+        <section class="recent-certificates">
+            <h2>Mis Certificados Recientes</h2>
+            <p>No hay certificados recientes.</p>
+        </section>
+
+        <section class="recent-news">
+            <h2>Noticias Recientes</h2>
+            <p>No hay noticias recientes.</p>
+        </section>
+
+        <section class="calendar">
+            <h2>Calendario</h2>
+            <div id="calendar"></div>
+        </section>
+
+        <section id="malla-section" style="display: none;">
+            <h2>Malla Curricular</h2>
+            <p>Contenido de la malla curricular...</p>
+        </section>
+    </main>
+
+    <script src="InicioEstudiante.js"></script>
+    <script src="util.js"></script>
+</body>
+</html>

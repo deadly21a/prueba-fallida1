@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="materias.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Materias Intensivo 2</title>
+    <script src="util.js"></script>
+</head>
+<header>
+    <div class="logo-container">
+        <!-- Agrega tu logo aquí -->
+        <a href="inicio-estudiante.html">
+            <img src="Logo-universidad-ecotec.png" alt="Logo" class="logo">
+        </a>
+    </div>
+    
+    <div class="user-info">
+        <span>MARIA</span>
+        <br>
+        <span>Estudiante Grado</span>
+        <div class="small-image-container">
+            <img src="cerebro.png" alt="Imagen pequeña" class="small-image">
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <div class="course" id="course1">
+            <h2>Materia: Mediación y Resolución de Conflictos</h2>
+            <p>Campus: Samborondón</p>
+            <p>Curso: D-203</p>
+            <p>Horario: 7:30 am - 9:00 am</p>
+            <button class="button" onclick="registerCourse('course1', 'Mediación y Resolución de Conflictos', 'Samborondón', 'D-203', '7:30 am - 9:00 am')">Registrar materia</button>
+        </div>
+        <div class="course" id="course2">
+            <h2>Materia: Derecho Mercantil</h2>
+            <p>Campus: Samborondón</p>
+            <p>Curso: C-306</p>
+            <p>Horario: 11:00 am - 1:00 pm</p>
+            <button class="button" onclick="registerCourse('course2', 'Derecho Mercantil', 'Samborondón', 'C-306', '11:00 am - 1:00 pm')">Registrar materia</button>
+        </div>
+    </div>
+
+    <script>
+        function registerCourse(courseId, courseName, campus, courseCode, schedule) {
+            var courses = JSON.parse(localStorage.getItem('registeredCourses')) || [];
+            
+            if (courses.length >= 2) {
+                alert('Ya has registrado el máximo de materias permitidas.');
+                return;
+            }
+            
+            var alreadyRegistered = courses.some(course => course.id === courseId);
+            if (alreadyRegistered) {
+                alert('Esta materia ya ha sido registrada.');
+                return;
+            }
+
+            var courseDetails = {
+                id: courseId,
+                name: courseName,
+                campus: campus,
+                courseCode: courseCode,
+                schedule: schedule
+            };
+            
+            var course = document.getElementById(courseId);
+            course.classList.add('hidden');
+            
+            courses.push(courseDetails);
+            localStorage.setItem('registeredCourses', JSON.stringify(courses));
+            console.log('Materia registrada:', courseDetails);
+            console.log('Materias registradas:', courses);
+            alert('Registro de materia exitosamente');
+            updateRecentCourses(); // Llama a la función para actualizar las materias recientes en "Inicio Estudiante"
+        }
+    </script>
+</body>
+</html>

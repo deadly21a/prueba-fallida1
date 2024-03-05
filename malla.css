@@ -1,0 +1,87 @@
+body {
+    background-color: #f6f6f6;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #77cacb;
+    color: #fff;
+}
+
+.logo-container {
+    order: 1;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.user-info {
+    text-align: right;
+    order: 2;
+}
+
+.small-image-container {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.small-image {
+    max-width: 30px;
+}
+
+.malla-container {
+    margin: 20px;
+}
+
+.semestre-container {
+    background-color: #3366cc;
+    color: #000000;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.semestre-container h2 {
+    margin-bottom: 15px;
+}
+
+.materia-container {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aprobado, .cursando, .no-cursada {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.aprobado {
+    background-color: #3366cc;
+    color: #fff;
+}
+
+.no-cursada {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.cursando {
+    background-color: #e0d645;
+    color: #fff;
+}
